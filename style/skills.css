@@ -1,0 +1,102 @@
+/* --- SECCIÓN SKILLS --- */
+
+.skill-section {
+    padding: 80px 0 10px;
+}
+
+.skill-section > .container > h2 { text-align: left; }   /* el resto del estilo está en general.css */
+
+.skill {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    width: 100%;
+}
+
+.skill-category { padding: 28px 30px; }   /* fondo/borde en general.css */
+
+.skill-category h2 {
+    font-family: var(--font-title);
+    font-weight: 500;
+    font-size: 1rem;
+    letter-spacing: 0.02em;
+    color: var(--secondary);
+    margin: 0 0 22px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--panel-border);
+}
+
+.tecnologias, .herramientas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.tecnologias > div,
+.herramientas > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 6px;
+    border-radius: var(--radius);
+    transition: background-color 0.25s ease;
+}
+
+.tecnologias > div:hover,
+.herramientas > div:hover {
+    background-color: rgba(var(--primary-rgb), 0.06);
+}
+
+.skill img {
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
+    transition: transform 0.25s ease;
+}
+
+.tecnologias > div:hover img,
+.herramientas > div:hover img {
+    transform: translateY(-3px);
+}
+
+.skill h3 {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--secondary-light);
+    text-align: center;
+    margin: 0;
+}
+
+/* --- RESPONSIVO (MÓVIL) --- */
+@media (max-width: 992px) {
+    .skill {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .skill-category {
+        padding: 22px 18px;
+    }
+
+    .tecnologias, .herramientas {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px 10px;
+    }
+
+    .skill img {
+        width: 32px;
+        height: 32px;
+    }
+
+    .tecnologias > div,
+    .herramientas > div {
+        padding: 10px 4px;
+    }
+
+    .skill h3 {
+        font-size: 0.72rem;
+    }
+}

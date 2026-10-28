@@ -1,0 +1,112 @@
+#sobreMi {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 10px 0 10px;
+}
+
+#sobreMi .descripcion {
+    width: 100%;
+}
+
+.descripcion h2 { margin-bottom: 40px; }   /* el resto del estilo está en general.css */
+
+.descripcion-body {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;   /* texto flexible / columna de iconos del ancho justo */
+    align-items: stretch;
+    width: 100%;
+}
+
+.descripcion-texto {
+    min-width: 0;
+    padding-right: 28px;
+}
+
+.descripcion-texto p:last-child {
+    margin-bottom: 0;
+}
+
+.descripcion-texto p {
+    font-size: 1.05rem;
+    line-height: 1.85rem;
+    color: var(--secondary-light);
+    margin-bottom: 20px;
+}
+
+/* Redes sociales: columna con el ancho justo, centrada verticalmente */
+.social {
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid var(--panel-border);
+    align-items: center;
+    justify-content: center;
+    gap: 33px;
+    padding-left: 32px;
+}
+
+.social a {
+    position: relative;
+    width: 62px;
+    height: 62px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--panel-border);
+    border-radius: 50%;
+    background-color: var(--panel);
+    transition: border-color 0.25s ease, background-color 0.25s ease, transform 0.2s ease;
+}
+
+.social img {
+    width: 22px;
+    height: 22px;
+}
+
+.social a::after {
+    content: attr(data-label);
+    position: absolute;
+    left: 50%;
+    bottom: calc(100% + 8px);
+    transform: translateX(-50%);
+    
+    background: var(--panel);
+    border: 1px solid var(--panel-border);
+    color: var(--secondary);
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.78rem;
+    white-space: nowrap;
+    
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease;
+}
+
+.social a:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+.social a:hover {
+    border-color: var(--primary);
+    background-color: rgba(var(--primary-rgb), 0.08);
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    #sobreMi { padding: 90px 0 70px; }
+    .descripcion-body { grid-template-columns: 1fr; }
+    .descripcion-texto { padding-right: 0; }
+    .social {
+        flex-direction: row;
+        border-left: none;
+        border-top: 1px solid var(--panel-border);
+        margin-top: 12px;
+        padding: 24px 0 0;
+        width: 100%;
+        justify-content: center;
+    }
+    .social a::after { display: none; }
+}

@@ -1,0 +1,9 @@
+{
+  "name": "portafolio",
+  "version": "1.0.0",
+  "description": "Portafolio web personal de Emanuel Rodriguez, con una escena 3D interactiva (Three.js) y proyectos desarrollados.",
+  "dependencies": {
+    "@vercel/analytics": "^2.0.1",
+    "three": "^0.173.0"
+  }
+}

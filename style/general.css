@@ -1,0 +1,84 @@
+/* =========================================================
+   GENERAL: variables, base y componentes compartidos
+   ========================================================= */
+
+:root {
+    --primary: #00c6ff;
+    --primary-rgb: 0, 198, 255; /* para usar con transparencia: rgba(var(--primary-rgb), .3) */
+    --secondary: white;
+    --secondary-light: rgb(173, 173, 173);
+    --dark2: #050505;
+    --panel: #10141f;
+    --panel-border: rgba(255, 255, 255, 0.08);
+    --font-title: 'Orbitron', sans-serif;
+    --radius: 6px;
+    --header-h: 64px; /* alto del menú fijo: lo usan .fondo y scroll-margin-top */
+}
+
+/* --- Base --- */
+html, body { overflow-x: hidden; }  /* Bootstrap ya pone margin/padding en 0 */
+
+body {
+    font-size: 18px;
+    font-family: 'Signika', sans-serif;
+    color: var(--secondary);
+    background-color: var(--dark2);
+}
+
+/* Las secciones usan .row como contenedor: se anulan los márgenes negativos de Bootstrap */
+.row { margin-right: 0; margin-left: 0; width: 100%; }
+
+a {
+    text-decoration: none;
+    color: var(--secondary);
+    transition: color 0.3s ease;     
+}
+
+/* Texto de acento (cian). */
+h2 span,
+.brand span,
+.subtitulo,
+.modal-body span,
+.footer-year { color: var(--primary); }
+
+/* --- Títulos de sección (Proyectos, Habilidades, Sobre mí) --- */
+.proyectos-section h2,
+.skill-section > .container > h2,
+.descripcion h2 {
+    font-family: var(--font-title);
+    font-weight: 500;
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    margin-bottom: 48px;
+    color: var(--secondary);
+}
+
+/* --- Paneles (tarjetas de proyecto y de habilidades) --- */
+.proyecto-item,
+.skill-category {
+    background-color: var(--panel);
+    border: 1px solid var(--panel-border);
+    border-radius: var(--radius);
+}
+
+/* --- Modales --- */
+.modal-content { background-color: rgba(0, 0, 0, 0.9); border: 1px solid var(--primary); }
+.modal-title { color: var(--primary); }      /* antes "h5" global */
+.mdlImg { width: 40px; }
+.link-subrayado { text-decoration: underline; }
+.modal .form-control { border: 1px solid black; }   /* antes: "form input, form textarea" + !important */
+#btnSubContac { background-color: var(--primary); border: none; color: black; font-weight: bold; }
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 36px 24px 32px;
+    color: var(--secondary-light);
+    border-top: 1px solid var(--panel-border);
+}
+
+.footer-name {
+    font-family: var(--font-title);
+    color: var(--secondary);
+    font-size: 0.95rem;
+    letter-spacing: 0.03em;
+}

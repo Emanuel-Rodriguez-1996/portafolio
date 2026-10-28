@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Emanuel Rodríguez</title>
+    <meta name="description"
+        content="Portafolio de Emanuel Rodríguez, estudiante y analista programador. Proyectos en C#/.NET, React, Node.js y más.">
+    <meta name="author" content="Emanuel Rodriguez">
+    <meta property="og:title" content="Emanuel Rodríguez | Portafolio">
+    <meta property="og:description" content="Analista Programador. Proyectos en C#/.NET, React, Node.js y más.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="imgs/og-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛰️</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Signika:wght@500&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style/general.css">
+    <link rel="stylesheet" href="style/inicio.css">
+    <link rel="stylesheet" href="style/proyects.css">
+    <link rel="stylesheet" href="style/skills.css">
+    <link rel="stylesheet" href="style/descripcion.css">
+    <link rel="stylesheet" href="style/portfolio-redesign.css">
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.173.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.173.0/examples/jsm/"
+        }
+    }
+    </script>
+    <script>
+        window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
+    <script type="module" src="app.js"></script>
+</head>
+
+<body>
+    <div id="overlay">
+        <video autoplay loop muted playsinline id="bg-video">
+            <source src="imgs/videoAstronautaFloat.mp4" type="video/mp4">
+        </video>
+
+        <div class="overlay-content">
+            <p class="overlay-title">Bienvenido a mi Portafolio Digital</p>
+            <span>Click para entrar</span>
+        </div>
+    </div>
+
+    <div class="fondo container-fluid">
+        <canvas id="myThreeCanvas" class="three-canvas"></canvas>
+
+        <header class="site-header">
+            <div class="site-header-inner">
+                <div class="brand-group">
+                    <img src="imgs/gifNegro.gif" alt="Foto de perfil de Emanuel Rodriguez" class="img-fluid gifNav">
+                    <a href="#inicio" class="brand">Emanuel Rodriguez</a>
+                </div>
+                <nav class="main-nav" id="mainNav">
+                    <a href="#inicio">Inicio</a>
+                    <a href="#proyects">Portafolio</a>
+                    <a href="#sobreMi">Sobre mí</a>
+                    <a href="#contacto">Contacto</a>
+                </nav>
+                <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false"
+                    aria-controls="mainNav">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </header>
+
+        <section class="container-fluid justify-content-center d-flex pri" id="inicio">
+            <div class="row justify-content-center align-items-center">
+                <article class="col-12 col-md-8 text-center article1">
+                        <img src="imgs/gifProf.gif" alt="Foto de perfil de Emanuel Rodriguez" class="perfilaso2" fetchpriority="high">
+                    <div class="link">
+                        <h1>Desarrollador Full Stack</h1>
+                        <p class="subtitulo">Estudiante en ORT/UTEC Licenciatura en Tecnología de la Información</p>
+                        <a aria-label="Perfil de GitHub" class="a" href="https://github.com/Emanuel-Rodriguez-1996" target="_blank" rel="noopener noreferrer"><img
+                                src="imgs/logoGitHub.svg" alt=""></a>
+                        <a aria-label="Perfil de LinkedIn" class="a" href="https://www.linkedin.com/in/emanuel-rodriguez-07994a259" target="_blank" rel="noopener noreferrer"><img
+                                src="imgs/logoLinkedin.svg" alt=""></a>
+                        <a aria-label="Contactar por correo" class="a" href="#" data-bs-toggle="modal" data-bs-target="#contactModal">
+                            <img src="imgs/logoGmail.svg" alt=""></a>
+                    </div>
+                    <a class="btn3D" href="https://portafolio3d.vercel.app/" target="_blank" rel="noopener noreferrer">
+                        Entrar al Escritorio Virtual
+                    </a>
+                </article>
+            </div>
+        </section>
+    </div>
+
+
+    <div class="fondo2 container-fluid">
+        <section id="proyects" class="row">
+            <div class="proyectos-section container">
+                <h2><span>Proyectos</span></h2>
+                <div class="proyectos-grid">
+                    <a class="proyecto-item" href="#DWAIModal" role="button" data-bs-toggle="modal" data-bs-target="#DWAIModal">
+                        <div class="proyecto-media">
+                            <img loading="lazy" decoding="async" src="imgs/proyectos/proyectoDWAIA.webp" alt="Observatorio: gestión de equipos astronómicos"
+                                class="img-fluid">
+                        </div>
+                        <div class="proyecto-info">
+                            <h3>Observatorio: Gestión de Equipos Astronómicos y Préstamos</h3>
+                            <p>Plataforma para centralizar el inventario astronómico, los préstamos a socios y la planificación de observaciones. Reúne en un mismo flujo la consulta de equipos disponibles, el seguimiento de préstamos y el registro de objetos celestes observados.</p>
+                            <div class="proyecto-tags"><span>C#</span><span>.NET MVC</span><span>SQL</span></div>
+                            <span class="proyecto-link">Ver detalles</span>
+                        </div>
+                    </a>
+                    <a class="proyecto-item" href="#biciModal" role="button" data-bs-toggle="modal" data-bs-target="#biciModal">
+                        <div class="proyecto-media">
+                            <img loading="lazy" decoding="async" src="imgs/proyectos/proyectoBici.webp" alt="Gestión de Bicicletas" class="img-fluid">
+                        </div>
+                        <div class="proyecto-info">
+                            <h3>Gestión de Bicicletas</h3>
+                            <p>Aplicación de consola que organiza el inventario de bicicletas y concentra la lógica para consultar y administrar sus registros. Proyecto académico enfocado en estructurar datos y resolver las operaciones principales desde Java.</p>
+                            <div class="proyecto-tags"><span>Java</span><span>NetBeans</span><span>Apache</span></div>
+                            <span class="proyecto-link">Ver detalles</span>
+                        </div>
+                    </a>
+                    <a class="proyecto-item" href="#estanciasAppModal" role="button" data-bs-toggle="modal" data-bs-target="#estanciasAppModal">
+                        <div class="proyecto-media">
+                            <img loading="lazy" decoding="async" src="imgs/proyectos/proyectoAppEstancias.webp" alt="Administración de Estancia"
+                                class="img-fluid">
+                        </div>
+                        <div class="proyecto-info">
+                            <h3>Administración de Estancia</h3>
+                            <p>Aplicación web para organizar la administración de una estancia rural con acceso diferenciado para capataz y peón. La separación de perfiles permite adaptar el acceso a las tareas de cada usuario dentro del sistema.</p>
+                            <div class="proyecto-tags"><span>C#</span><span>ASP.NET MVC</span><span>Bootstrap</span>
+                            </div>
+                            <span class="proyecto-link">Ver detalles</span>
+                        </div>
+                    </a>
+                    <a class="proyecto-item" href="#alasRojasModal" role="button" data-bs-toggle="modal" data-bs-target="#alasRojasModal">
+                        <div class="proyecto-media">
+                            <img loading="lazy" decoding="async" src="imgs/proyectos/AlasRojas.webp" alt="Club Ciclista Alas Rojas" class="img-fluid">
+                        </div>
+                        <div class="proyecto-info">
+                            <h3>Club Ciclista Alas Rojas</h3>
+                            <p>Sitio institucional del Club Ciclista Alas Rojas, creado para presentar su historia, actividades y plantel, además de dar visibilidad a sus sponsors. La información está organizada para que socios, seguidores y visitantes puedan conocer el club desde distintos dispositivos.</p>
+                            <div class="proyecto-tags"><span>HTML</span><span>JavaScript</span><span>CSS</span></div>
+                            <span class="proyecto-link">Ver detalles</span>
+                        </div>
+                    </a>
+                    <a class="proyecto-item" href="#portafolioModal" role="button" data-bs-toggle="modal" data-bs-target="#portafolioModal">
+                        <div class="proyecto-media">
+                            <img loading="lazy" decoding="async" src="imgs/proyectos/proyectoEscritorio3D.webp" alt="Escritorio 3D" class="img-fluid">
+                        </div>
+                        <div class="proyecto-info">
+                            <h3>Proyecto 3D</h3>
+                            <p>Experiencia interactiva en 3D construida con React y Three.js. Permite explorar un escritorio virtual y manipular objetos en el espacio, combinando una interfaz web con una escena tridimensional.</p>
+                            <div class="proyecto-tags"><span>React</span><span>Three.js</span><span>JavaScript</span></div>
+                            <span class="proyecto-link">Ver detalles</span>
+                        </div>
+                    </a>
+                    <a class="proyecto-item" href="#sociosAlasRojasModal" role="button" data-bs-toggle="modal" data-bs-target="#sociosAlasRojasModal">
+                        <div class="proyecto-media">
+                            <img loading="lazy" decoding="async" src="imgs/proyectos/proyectoSociosAlasRojas.webp" alt="Socios Alas Rojas"
+                                class="img-fluid">
+                        </div>
+                        <div class="proyecto-info">
+                            <h3>Socios Alas Rojas</h3>
+                            <p>Sistema para gestionar la información de los socios del Club Alas Rojas y reducir tareas administrativas manuales. Cuenta con una interfaz en React conectada a un backend en Node.js y una base de datos PostgreSQL.</p>
+                            <div class="proyecto-tags"><span>React</span><span>Node.js</span><span>PostgreSQL</span></div>
+                            <span class="proyecto-link">Ver detalles</span>
+                        </div>
+                    </a>
+                     <a class="proyecto-item" href="#hotelModal" role="button" data-bs-toggle="modal" data-bs-target="#hotelModal">
+                        <div class="proyecto-media">
+                            <img loading="lazy" decoding="async" src="imgs/proyectos/proyectoHotel.webp" alt="Hotel" class="img-fluid">
+                        </div>
+                        <div class="proyecto-info">
+                            <h3>Gestion de reservas Hotel</h3>
+                            <p>Sistema web para administrar el ciclo de reservas de un hotel: gestiona usuarios y habitaciones, registra estadías y permite comprobar la disponibilidad. Incluye autenticación y roles, cálculo de noches y persistencia local de datos, con pruebas automatizadas para la lógica principal.</p>
+                            <div class="proyecto-tags"><span>HTML</span><span>JavaScript</span><span>CSS</span></div>
+                            <span class="proyecto-link">Ver detalles</span>
+                        </div>
+                    </a>
+                     <a class="proyecto-item" href="#gitHubModal" role="button" data-bs-toggle="modal" data-bs-target="#gitHubModal">
+                        <div class="proyecto-media">
+                            <img loading="lazy" decoding="async" src="imgs/proyectos/proyectoGitHub.webp" alt="GitHub" class="img-fluid">
+                        </div>
+                        <div class="proyecto-info">
+                            <h3>GitHub</h3>
+                            <p>Selección de repositorios que muestra distintos ejercicios y proyectos de desarrollo, desde lógica de frontend y backend hasta modelado y consultas de bases de datos. Algunos se centran en la lógica y no incluyen una interfaz gráfica.
+                            </p>
+                            <div class="proyecto-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Node.js</span><span>SQL</span></div>
+                            <span class="proyecto-link">Ver detalles</span>
+                        </div>
+                    </a>
+                    <a class="proyecto-item" href="#caloriasAPKModal" role="button" data-bs-toggle="modal" data-bs-target="#caloriasAPKModal">
+                        <div class="proyecto-media">
+                            <img loading="lazy" decoding="async" src="imgs/proyectos/proyectoCaloriasApk.jpg" alt="Calorías APK" class="img-fluid">
+                        </div>
+                        <div class="proyecto-info">
+                            <h3>Calorías Diarias</h3>
+                            <p>Aplicación móvil para registrar alimentos consumidos durante el día y consultar el seguimiento de calorías. Desarrollada con Ionic y JavaScript, se conecta a una API provista por la institución educativa.
+                            </p>
+                            <div class="proyecto-tags"><span>JavaScript</span><span>Ionic</span></div>
+                            <span class="proyecto-link">Ver detalles</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="skill-section" id="skills">
+            <div class="container">
+                <h2><span>Habilidades</span></h2>
+                <div class="skill row">
+
+                    <!-- Lenguajes -->
+                    <div class="skill-category">
+                        <h2><span>Lenguajes</span></h2>
+                        <div class="tecnologias">
+                            <div><img loading="lazy" decoding="async" src="imgs/skill/iconoHtml.png" alt="">
+                                <h3>HTML</h3>
+                            </div>
+                            <div><img loading="lazy" decoding="async" src="imgs/skill/iconoCss.png" alt="">
+                                <h3>CSS</h3>
+                            </div>
+                            <div><img loading="lazy" decoding="async" src="imgs/skill/iconoJavaScript.png" alt="">
+                                <h3>Javascript</h3>
+                            </div>
+                            <div><img loading="lazy" decoding="async" src="imgs/skill/iconoCsharp.png" alt="">
+                                <h3>C#</h3>
+                            </div>
+                            <div><img loading="lazy" decoding="async" src="imgs/skill/iconoSql.png" alt="">
+                                <h3>SQL</h3>
+                            </div>
+                            <div><img loading="lazy" decoding="async" src="imgs/skill/iconoJava.png" alt="">
+                                <h3>Java</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Frontend -->
+                    <div class="skill-category">
+                        <h2><span>Frontend</span></h2>
+                        <div class="herramientas">
+                            <div><img loading="lazy" decoding="async" src="imgs/skill/iconoBootstrap.png" alt="">
+                                <h3>Bootstrap</h3>
+                            </div>
+                            <div><img loading="lazy" decoding="async" src="imgs/skill/iconoThree.png" alt="">
+                                <h3>Three.js</h3>
+                            </div>
+                            <div><img loading="lazy" decoding="async" src="imgs/skill/iconoReact.png" alt="">
+                                <h3>React</h3>
+                            </div>
+                            <div><img loading="lazy" decoding="async" src="imgs/skill/iconoIonic.png" alt="">
+                                <h3>Ionic</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Herramientas -->
+                    <div class="skill-category">
+                        <h2><span>Herramientas</span></h2>
+                        <div class="tecnologias">
+                            <div><img loading="lazy" decoding="async" src="imgs/skill/iconoGitHub.png" alt="">
+                                <h3>GitHub</h3>
+                            </div>
+                            <div><img loading="lazy" decoding="async" src="imgs/skill/iconoNpm.png" alt="">
+                                <h3>NPM</h3>
+                            </div>
+                            <div><img loading="lazy" decoding="async" src="imgs/skill/iconoVisual22.png" alt="">
+                                <h3>Visual Studio 2026</h3>
+                            </div>
+                            <!--Agregar intellij, APACHENETBEANS-->
+                            <div><img loading="lazy" decoding="async" src="imgs/skill/iconoVisualStudio.png" alt="">
+                                <h3>Visual Studio</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Backend -->
+                    <div class="skill-category">
+                        <h2><span>Backend</span></h2>
+                        <div class="herramientas">
+                            <div><img loading="lazy" decoding="async" src="imgs/skill/iconoNode.png" alt="">
+                                <h3>Node.js</h3>
+                            </div>
+                            <div><img loading="lazy" decoding="async" src="imgs/skill/icono.Net.png" alt="">
+                                <h3>.NET Framework</h3>
+                            </div>
+                            <div><img loading="lazy" decoding="async" src="imgs/skill/iconoAsp.png" alt="">
+                                <h3>ASP.NET MVC</h3>
+                            </div>
+                            <div><img loading="lazy" decoding="async" src="imgs/skill/iconoMongoDb.png" alt="">
+                                <h3>MongoDB</h3>
+                            </div>
+                            <div><img loading="lazy" decoding="async" src="imgs/skill/iconoPostgreSql.png" alt="">
+                                <h3>PostgreSQL</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="container-fluid" id="sobreMi">
+            <div class="descripcion container">
+                <h2><span>Sobre mí</span></h2>
+                <div class="descripcion-body">
+                    <div class="descripcion-texto">
+                        <p><strong>¡Hola! Soy Emanuel Rodriguez.</strong></p>
+
+                        <p>
+                            Hace más de cinco años comencé mi camino en la tecnología, empezando de forma autodidacta y
+                            dedicando muchas horas a practicar lógica y resolver problemas.
+                            En ese proceso cursé el programa Jóvenes a Programar, orientado a Testing, una experiencia
+                            que
+                            fortaleció mis bases y despertó aún más mi interés por el desarrollo de software.
+                        </p>
+
+                        <p>
+                            Con el tiempo, esa curiosidad se transformó en una decisión profesional.
+                        </p>
+
+                        <p>
+                            Actualmente estudio Tecnologías de la Información en UTEC y soy Analista Programador (título
+                            intermedio, Universidad ORT).
+                            Combino mi formación académica con práctica constante, desarrollando proyectos que me
+                            permiten
+                            seguir mejorando y consolidar mis conocimientos.
+                        </p>
+
+                        <p>
+                            Me interesa formar parte de un equipo donde pueda aportar, aprender de profesionales con
+                            experiencia y seguir creciendo dentro del mundo IT.
+                            Me considero una persona responsable, analítica y comprometida con el trabajo bien hecho.
+                        </p>
+
+                        <p>
+                            Estoy en búsqueda de mi primera oportunidad profesional en el área, con muchas ganas de
+                            sumar
+                            valor y seguir desarrollándome.
+                        </p>
+
+
+
+                    </div>
+                    <div class="social"><a
+                            aria-label="Perfil de GitHub" href="https://github.com/Emanuel-Rodriguez-1996" target="_blank" rel="noopener noreferrer"
+                            data-label="Vea mi perfil de GitHub"><img src="imgs/logoGitHub.svg" alt=""></a>
+                        <a aria-label="Perfil de LinkedIn" href="https://www.linkedin.com/in/emanuel-rodriguez-07994a259" target="_blank" rel="noopener noreferrer"
+                            data-label="Vea mi perfil de LinkedIn"><img src="imgs/logoLinkedin.svg" alt=""></a>
+                        <a aria-label="Contactar por correo" href="#" data-bs-toggle="modal" data-bs-target="#contactModal" data-label="Deje su mensaje">
+                            <img src="imgs/logoGmail.svg" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+            <section class="contact-section" id="contacto">
+            <div class="contact-layout">
+                <div class="contact-copy">
+                    <div class="section-kicker"><span>04 / HABLEMOS</span><i></i><span>PRÓXIMO CAPÍTULO</span></div>
+                    <h2>Las buenas ideas<br>empiezan con <em>un hola.</em></h2>
+                    <p>¿Tienes un proyecto, una oportunidad o una idea que quieras llevar más lejos? Me gustaría conocerla.</p>
+                    <button class="contact-cta" type="button" data-bs-toggle="modal" data-bs-target="#contactModal">Iniciar conversación <span>↗</span></button>
+                </div>
+                <div class="contact-aside"><span class="contact-orbit">ER <i>✳</i> 26</span><div class="contact-socials"><a href="https://github.com/Emanuel-Rodriguez-1996" target="_blank" rel="noopener noreferrer">GITHUB <span>↗</span></a><a href="https://www.linkedin.com/in/emanuel-rodriguez-07994a259" target="_blank" rel="noopener noreferrer">LINKEDIN <span>↗</span></a><button type="button" data-bs-toggle="modal" data-bs-target="#contactModal">EMAIL <span>↗</span></button></div><small>MONTEVIDEO · URUGUAY</small></div>
+            </div>
+        </section><footer>
+        <p class="footer-name">ⓒ Emanuel Rodriguez <span class="footer-year" id="anioActual">2026</span></p>
+    </footer>
+    <script>document.getElementById("anioActual").textContent = new Date().getFullYear();</script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!--Modal proyectos-->
+    <div class="modal fade mod" id="hotelModal" tabindex="-1" aria-labelledby="hotelModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="hotelModalLabel">Hotel Management System</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Imagen en el modal -->
+                    <img loading="lazy" decoding="async" src="imgs/proyectos/modalHotel.webp" alt="Gestión de reservas de hotel" class="img-fluid mb-3">
+
+                    <!-- Descripción del proyecto -->
+                    <p>Durante el desarrollo se trabajó con HTML, CSS y JavaScript para construir una aplicación web interactiva. Se aplicaron conceptos de programación orientada a objetos, manipulación del DOM, manejo de eventos, validación de formularios y almacenamiento de datos mediante localStorage. También se implementó un sistema de registro y autenticación de usuarios, control de roles, gestión de reservas, cálculo de estadías y validación de disponibilidad.</p>
+                    <p> Finalmente, se utilizaron pruebas automatizadas con Jest para verificar el correcto funcionamiento de la lógica principal del sistema.</p>
+
+                    <!-- Enlace del proyecto -->
+                    <div><strong>Enlace:</strong> <a href="https://github.com/Emanuel-Rodriguez-1996/Hoteles"
+                            target="_blank" rel="noopener noreferrer"><span>Repositorio en GitHub</span></a></div>
+
+                    <!-- Tecnologías utilizadas -->
+                    <div class="mt-3"><strong>Tecnologías Utilizadas:</strong>
+                        <div class="d-flex">
+                            <img loading="lazy" decoding="async" src="imgs/skill/iconoHtml.png" alt="HTML" class="img-fluid me-2 mdlImg">
+                            <img loading="lazy" decoding="async" src="imgs/skill/iconoJavaScript.png" alt="JavaScript" class="img-fluid me-2 mdlImg">
+                            <img loading="lazy" decoding="async" src="imgs/skill/iconoCss.png" alt="CSS" class="img-fluid mdlImg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+
+    <div class="modal fade mod" id="biciModal" tabindex="-1" aria-labelledby="biciModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="biciModalLabel">Bici App</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body d-flex flex-column justify-content-center">
+                    <!-- Imagen en el modal -->
+                    <img loading="lazy" decoding="async" src="imgs/proyectos/modalBici.webp" alt="Bici App" class="img-fluid mb-3 text-center">
+
+                    <!-- Descripción del proyecto -->
+                    <p><strong>Gestión de Bicicletas</strong> es una aplicación desarrollada en Java, implementada en el
+                        entorno
+                        de desarrollo Apache NetBeans. El proyecto fue realizado en cumplimiento de los requerimientos
+                        académicos
+                        establecidos por la facultad.</p>
+
+                    <p>Se trata de una aplicación de consola, sin interfaz gráfica por el momento, orientada a la
+                        correcta
+                        implementación de la lógica de negocio y la
+                        gestión estructurada de datos y la eficiencia de los algoritmos, permitiendo a los usuarios
+                        administrar y controlar el inventario de bicicletas.</p>
+
+                    <p>Link a Repositorio en GitHub
+                        <a href="https://github.com/Emanuel-Rodriguez-1996/GestionBicis" class="link-subrayado" target="_blank" rel="noopener noreferrer"><span>Gestion Bicis</span></a>
+                    </p>
+
+                    <!-- Tecnologías utilizadas -->
+                    <div class="mt-3"><strong>Tecnologías Utilizadas:</strong>
+                        <div class="d-flex">
+                            <img src="imgs/skill/iconoJava.png" alt="Java" class="img-fluid mdlImg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade mod" id="DWAIModal" tabindex="-1" aria-labelledby="DWAIModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="DWAIModalLabel">Observatorio</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Imagen del proyecto -->
+                    <img loading="lazy" decoding="async" src="imgs/proyectos/modaDWAIA.webp" alt="Observatorio: gestión de equipos astronómicos" class="img-fluid mb-3">
+
+                    <!-- Descripción del proyecto -->
+                    <p><strong>Observatorio</strong> es un proyecto desarrollado utilizando tecnologías como C#, ASP.NET
+                        MVC, SQL Server, CSS y Bootstrap.</p>
+                    <p>Es una aplicación web desarrollada en ASP.NET Core con una arquitectura de dos partes: una API
+                        REST (con capas de lógica de negocio, aplicación e infraestructura) y un front-end MVC que la
+                        consume. Fue realizada en cumplimiento de los requerimientos académicos de la facultad.</p>
+                    <p>Permite gestionar el inventario de telescopios, cámaras, oculares y monturas, y controlar los
+                        préstamos de equipos a los socios.</p>
+                    <p>Cada socio puede planificar observaciones de objetos celestes sobre sus préstamos activos y
+                        consultar un ranking de los objetos más observados. Las observaciones cuentan con una evaluación
+                        asistida por inteligencia artificial.</p>
+                    <p>El acceso se controla mediante autenticación con JWT y tres roles: el administrador gestiona
+                        equipos, socios y auditoría de préstamos, el coordinador registra préstamos y devoluciones, y el
+                        socio consulta sus préstamos y observaciones.</p>
+                    <p>Los datos se almacenan en una base de datos SQL Server mediante Entity Framework Core.</p>
+                    <!-- Datos de prueba -->
+                    <p><strong>Datos de prueba:</strong></p>
+                    <p><strong>Perfil Administrador:</strong><br>
+                        - UserName: <span>admin</span><br>
+                        - Contraseña: <span>Admin@1234</span></p>
+
+                    <p><strong>Perfil Coordinador:</strong><br>
+                        - UserName: <span>cord1</span><br>
+                        - Contraseña: <span>Coord@1234</span></p>
+
+                    <p><strong>Perfil Socio:</strong><br>
+                        - UserName: <span>socio1</span><br>
+                        - Contraseña: <span>Socio@1234</span></p>
+
+                    <!-- Enlace al proyecto -->
+                    <div><strong>Enlace:</strong> <a href="https://github.com/Emanuel-Rodriguez-1996/Observatorio-Astronomico.git"
+                            target="_blank" rel="noopener noreferrer">Repositorio en GitHub</a></div>
+
+                    <!-- Tecnologías utilizadas -->
+                    <div class="mt-3"><strong>Tecnologías Utilizadas:</strong>
+                        <div class="d-flex">
+                            <img src="imgs/skill/iconoCsharp.png" alt="C#" class="img-fluid me-2 mdlImg">
+                            <img src="imgs/skill/icono.Net.png" alt=".NET Framework" class="img-fluid me-2 mdlImg">
+                            <img src="imgs/skill/iconoAsp.png" alt="ASP.NET MVC" class="img-fluid mdlImg">
+                            <img src="imgs/skill/iconoBootstrap.png" alt="Bootstrap" class="img-fluid mdlImg">
+                            <img src="imgs/skill/iconoCss.png" alt="CSS" class="img-fluid mdlImg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade mod" id="estanciasAppModal" tabindex="-1" aria-labelledby="estanciasAppModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="estanciasAppModalLabel">Administración de Estancia</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Imagen del proyecto -->
+                    <img loading="lazy" decoding="async" src="imgs/proyectos/modalPotreroApp.webp" alt="Administración de Estancia"
+                        class="img-fluid mb-3">
+
+                    <!-- Descripción del proyecto -->
+                    <p><strong>Administración de Estancia</strong> es una web desarrollada utilizando C# y ASP.NET MVC.
+                        CSS y Bootstrap.
+                    </p>
+                    <p>Desarrollada con el fin de cumplir con las necesidades del proyecto planteado, esta aplicación
+                        permite a los usuarios llevar el control de sus Estancias.</p>
+
+                    <!-- Datos de prueba -->
+                    <p><strong>Datos de prueba:</strong></p>
+                    <p><strong>Perfil Capataz:</strong><br>
+                        - email: <span>fau@gml.com</span><br>
+                        - contraseña: <span>123</span></p>
+
+                    <p><strong>Perfil Peón:</strong><br>
+                        - email: <span>facu@gml.com</span><br>
+                        - contraseña: <span>123</span></p>
+
+                    <!-- Enlace al proyecto -->
+                    <div><strong>Enlace:</strong> <a href="https://github.com/Emanuel-Rodriguez-1996/AppEstancias"
+                            target="_blank" rel="noopener noreferrer"><span>Repositorio en GitHub</span></a></div>
+
+                    <!-- Tecnologías utilizadas -->
+                    <div class="mt-3"><strong>Tecnologías Utilizadas:</strong>
+                        <div class="d-flex">
+                            <img src="imgs/skill/iconoCsharp.png" alt="C#" class="img-fluid me-2 mdlImg">
+                            <img src="imgs/skill/icono.Net.png" alt=".NET Framework" class="img-fluid me-2 mdlImg">
+                            <img src="imgs/skill/iconoAsp.png" alt="ASP.NET MVC" class="img-fluid mdlImg">
+                            <img src="imgs/skill/iconoBootstrap.png" alt="Bootstrap" class="img-fluid mdlImg">
+                            <img src="imgs/skill/iconoCss.png" alt="CSS" class="img-fluid mdlImg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade mod" id="caloriasAPKModal" tabindex="-1" aria-labelledby="caloriasAPKModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="caloriasAPKModalLabel">Calorías Diarias APK</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body d-flex flex-column">
+                    <!-- Imagen del proyecto -->
+                    <img loading="lazy" decoding="async" src="imgs/proyectos/proyectoCaloriasApk.jpg" alt="Calorías APK" class="img-fluid mb-3">
+
+                    <!-- Descripción del proyecto -->
+                    <p><strong>Calorías Diarias</strong> es una APK con Android Studio desarrollada con JS-HTML y Framework de Ionic que
+                        funciona mediante una API gestionada por la institución educativa.</p>
+                    <p>Desarrollada con el fin de cumplir con las necesidades del proyecto planteado, esta aplicación
+                        permite a los usuarios registrar alimentos diarios y llevar la cuenta de sus calorías, además de
+                        otros tipos de funcionalidades.</p>
+
+                    <!-- Enlace al proyecto -->
+                    <div><strong>Enlace:</strong> <a href="https://github.com/Emanuel-Rodriguez-1996/calorias-Apk"
+                            target="_blank" rel="noopener noreferrer"><span>Repositorio en GitHub</span></a></div>
+
+                    <!-- Tecnologías utilizadas -->
+                    <div class="mt-3"><strong>Tecnologías Utilizadas:</strong>
+                        <div class="d-flex">
+                            <img loading="lazy" decoding="async" src="imgs/skill/iconoHtml.png" alt="HTML" class="img-fluid me-2 mdlImg">
+                            <img loading="lazy" decoding="async" src="imgs/skill/iconoJavaScript.png" alt="JavaScript" class="img-fluid me-2 mdlImg">
+                            <img src="imgs/skill/iconoIonic.png" alt="Ionic" class="img-fluid mdlImg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade mod" id="portafolioModal" tabindex="-1" aria-labelledby="portafolioModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="portafolioModalLabel">Escritorio 3D</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Imagen en el modal -->
+                    <img loading="lazy" decoding="async" src="imgs/proyectos/modalPortafolio3D.webp" alt="Escritorio 3D" class="img-fluid mb-3">
+
+                    <!-- Descripción del proyecto -->
+                    <p>Escritorio 3D es una aplicación desarrollada con tecnologías como React y Three.Js</p>
+                    <p>Esta aplicación permite visualizar objetos en tres dimensiones, interactuar con ellos y manipular
+                        su posición y orientación.</p>
+                    <p>Proyecto despluegado con Vercel, "Hacer clic en el boton de Escritorio Virtual para verlo en
+                        vivo"</p>
+                    <!-- Tecnologías utilizadas -->
+                    <div class="mt-3"><strong>Tecnologías Utilizadas:</strong>
+                        <div class="d-flex">
+                            <img loading="lazy" decoding="async" src="imgs/skill/iconoHtml.png" alt="HTML" class="img-fluid me-2 mdlImg">
+                            <img loading="lazy" decoding="async" src="imgs/skill/iconoJavaScript.png" alt="JavaScript" class="img-fluid me-2 mdlImg">
+                            <img loading="lazy" decoding="async" src="imgs/skill/iconoCss.png" alt="CSS" class="img-fluid mdlImg">
+                            <img loading="lazy" decoding="async" src="imgs/skill/iconoReact.png" alt="React" class="img-fluid mdlImg">
+                            <img loading="lazy" decoding="async" src="imgs/skill/iconoThree.png" alt="Three" class="img-fluid mdlImg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade mod" id="alasRojasModal" tabindex="-1" aria-labelledby="alasRojasModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="alasRojasModalLabel">Alas Rojas</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body d-flex flex-column justify-content-center">
+                    <!-- Imagen en el modal -->
+                    <img loading="lazy" decoding="async" src="imgs/proyectos/modalAlasRojas.webp" alt="Club Ciclista Alas Rojas"
+                        class="img-fluid mb-3 text-center">
+
+                    <!-- Descripción del proyecto -->
+                    <p>AlasRojasOficial es un sitio web funcional para celulares creado para presentar la
+                        historia, el equipo y las actividades del Club Ciclista Alas Rojas de Santa Lucía, Canelones.
+                    </p>
+                    <p>Desarrollado con el fin de cumplir con las necesidades del cliente, se basa en dar a conocer
+                        la información institucional del club, mostrando su trayectoria, plantel, eventos, sponsors y
+                        noticias
+                        de forma organizada y accesible.</p>
+                    <p>Se utilizan HTML, CSS y JavaScript para construir una experiencia visual atractiva, e integra
+                        Vercel Analytics para llevar un registro de las visitas al sitio.</p>
+                    <!-- Enlace del proyecto -->
+                    <div><strong>Enlace:</strong> <a href="https://clubciclistaalasrojas.vercel.app/"
+                            target="_blank" rel="noopener noreferrer"><span>https://www.AlasRojasOficial.com</span></a></div>
+
+                    <!-- Tecnologías utilizadas -->
+                    <div class="mt-3"><strong>Tecnologías Utilizadas:</strong>
+                        <div class="d-flex">
+                            <img loading="lazy" decoding="async" src="imgs/skill/iconoHtml.png" alt="HTML" class="img-fluid me-2 mdlImg">
+                            <img loading="lazy" decoding="async" src="imgs/skill/iconoJavaScript.png" alt="JavaScript" class="img-fluid me-2 mdlImg">
+                            <img loading="lazy" decoding="async" src="imgs/skill/iconoCss.png" alt="CSS" class="img-fluid mdlImg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade mod" id="sociosAlasRojasModal" tabindex="-1" aria-labelledby="sociosAlasRojasModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="sociosAlasRojasModalLabel">Socios Alas Rojas</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Imagen en el modal -->
+                    <img loading="lazy" decoding="async" src="imgs/proyectos/modalSociosAlasRojas.webp" alt="Socios Alas Rojas" class="img-fluid mb-3">
+
+                    <!-- Descripción del proyecto -->
+                    <p>Alas Rojas es una aplicación desarrollada principalmente con tecnologías como React y Node.js</p>
+                    <p>Desarrollada con el fin de cumplir los requerimientos establecidos por el cliente.</p>
+                    <p>Esta aplicación permite llevar una mejor administracion de la institución y automatizar muchas
+                        tareas manuales.</p>
+                    <p>Funciona con una base de datos Node.js Expres + PostgreSQL</p>
+
+                    <p>Link a Repositorio en GitHub Frontend
+                        <a href="https://github.com/Emanuel-Rodriguez-1996/Socios-AlasRojas-Front" class="link-subrayado" target="_blank" rel="noopener noreferrer"><span>AlasRojas-Front</span></a>
+                    </p>
+
+                    <p>Link a Repositorio en GitHub Backend
+                        <a href="https://github.com/Emanuel-Rodriguez-1996/Socios-AlasRojas-Back" class="link-subrayado" target="_blank" rel="noopener noreferrer"><span>AlasRojas-Back</span></a>
+                    </p>
+                    <!-- Tecnologías utilizadas -->
+                    <div class="mt-3"><strong>Tecnologías Utilizadas:</strong>
+                        <div class="d-flex">
+                            <img loading="lazy" decoding="async" src="imgs/skill/iconoHtml.png" alt="HTML" class="img-fluid me-2 mdlImg">
+                            <img loading="lazy" decoding="async" src="imgs/skill/iconoJavaScript.png" alt="JavaScript" class="img-fluid me-2 mdlImg">
+                            <img loading="lazy" decoding="async" src="imgs/skill/iconoCss.png" alt="CSS" class="img-fluid mdlImg">
+                            <img loading="lazy" decoding="async" src="imgs/skill/iconoReact.png" alt="React" class="img-fluid mdlImg">
+                            <img loading="lazy" decoding="async" src="imgs/skill/iconoNode.png" alt="Node.js" class="img-fluid mdlImg">
+                            <img loading="lazy" decoding="async" src="imgs/skill/iconoPostgreSql.png" alt="PostgreSQL" class="img-fluid mdlImg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade mod" id="gitHubModal" tabindex="-1" aria-labelledby="gitModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="gitModalLabel">GitHub</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body d-flex flex-column justify-content-center">
+                    <!-- Imagen en el modal -->
+                    <img loading="lazy" decoding="async" src="imgs/proyectos/proyectoGitHub.webp" alt="GitHub" class="img-fluid mb-3 text-center">
+
+                    <!-- Descripción del proyecto -->
+                    <p>Proyectos de GitHub, contiene los enlaces a los repositorios, los cuales algunos no tienen una
+                        interfaz gráfica.</p>
+                    <p>Se basa en algunos proyectos de logica Web Backend-Frontend y algunos de Bases de datos.</p>
+
+                    <p>Link a Repositorio en GitHub
+                        <a href="https://github.com/Emanuel-Rodriguez-1996/PeluqueriaNoCount" class="link-subrayado" target="_blank" rel="noopener noreferrer"><span>Peluqueria</span></a>
+                    </p>
+
+                    <p>Link a Repositorio en GitHub
+                        <a href="https://github.com/Emanuel-Rodriguez-1996/BaseDatosSQL" class="link-subrayado" target="_blank" rel="noopener noreferrer"><span>Base de Datos2</span></a>
+                    </p>
+
+                    <p>Link a Repositorio en GitHub
+                        <a href="https://github.com/Emanuel-Rodriguez-1996/MetodologisAgiles" class="link-subrayado" target="_blank" rel="noopener noreferrer"><span>Gestion de Proyectos</span></a>
+                    </p>
+
+                    <p>Link a Repositorio en GitHub
+                        <a href="https://github.com/Emanuel-Rodriguez-1996/BasicBaseDatos" class="link-subrayado" target="_blank" rel="noopener noreferrer"><span>Basico Base de Datos</span></a>
+                    </p>
+
+                    <p>Link a Repositorio en GitHub
+                        <a href="https://github.com/Emanuel-Rodriguez-1996/DIW.dise-o" class="link-subrayado" target="_blank" rel="noopener noreferrer"><span>Diseño de Interfaces Web</span></a>
+                    </p>
+                    
+
+                    <!-- Tecnologías utilizadas -->
+                    <div class="mt-3"><strong>Tecnologías Utilizadas:</strong>
+                        <div class="d-flex">
+                            <img loading="lazy" decoding="async" src="imgs/skill/iconoSql.png" alt="SQL" class="img-fluid me-2 mdlImg">
+                            <img loading="lazy" decoding="async" src="imgs/skill/iconoHtml.png" alt="HTML" class="img-fluid me-2 mdlImg">
+                            <img loading="lazy" decoding="async" src="imgs/skill/iconoCss.png" alt="CSS" class="img-fluid mdlImg">
+                            <img loading="lazy" decoding="async" src="imgs/skill/iconoBootstrap.png" alt="Bootstrap" class="img-fluid mdlImg">
+                            <img loading="lazy" decoding="async" src="imgs/skill/iconoReact.png" alt="React" class="img-fluid mdlImg">
+                            <img loading="lazy" decoding="async" src="imgs/skill/iconoNode.png" alt="Node.js" class="img-fluid mdlImg">
+                            <img loading="lazy" decoding="async" src="imgs/skill/iconoMongoDb.png" alt="MongoDB" class="img-fluid mdlImg">
+                            <img loading="lazy" decoding="async" src="imgs/skill/iconoNpm.png" alt="npm" class="img-fluid mdlImg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="contactModalLabel">Contacto</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Formulario de contacto -->
+                    <form class="form" action="https://formspree.io/f/xnnadjej" method="POST">
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Tu Correo Electrónico</label>
+                            <input type="email" name="email" id="email" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Deja tu Mensaje</label>
+                            <textarea name="message" id="message" class="form-control" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" id="btnSubContac">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="scroll-experience.js" defer></script>
+</body>
+
+</html>
+
+
